@@ -9,6 +9,7 @@ from transformers import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoPro
 # Load the model in half-precision on the available device(s)
 model = Qwen2VLForConditionalGeneration.from_pretrained("Qwen/Qwen2-VL-7B-Instruct", device_map="auto")
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
+torch.cuda.empty_cache()
 
 # Image
 url = "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VL/assets/demo.jpeg"
