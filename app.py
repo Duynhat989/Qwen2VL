@@ -12,7 +12,7 @@ processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
 torch.cuda.empty_cache()
 
 # Image
-url = "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VL/assets/demo.jpeg"
+url = "https://i.ibb.co/cXscxjC/logo-v2.jpg"
 image = Image.open(requests.get(url, stream=True).raw)
 conversation = [
     {
